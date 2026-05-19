@@ -2,15 +2,17 @@
 
 :root {
   /* Color Palette - Vibrant Modern Theme */
-  --primary-color: #6366f1; /* Indigo */
+  --primary-color: #6366f1;
+  /* Indigo */
   --primary-hover: #4f46e5;
-  --secondary-color: #ec4899; /* Pink */
+  --secondary-color: #ec4899;
+  /* Pink */
   --bg-color: #f8fafc;
   --surface-color: #ffffff;
   --text-primary: #0f172a;
   --text-secondary: #64748b;
   --border-color: #e2e8f0;
-  
+
   /* Status Colors */
   --status-pending: #f59e0b;
   --status-resolved: #10b981;
@@ -18,7 +20,7 @@
 
   /* Typography */
   --font-main: 'Inter', sans-serif;
-  
+
   /* Shadows & Effects */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
@@ -262,6 +264,7 @@ textarea.form-control {
   margin-bottom: 1rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3; /* standard property for compatibility */
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
@@ -308,16 +311,45 @@ textarea.form-control {
 }
 
 /* Typography Utilities */
-.text-center { text-align: center; }
-.mt-1 { margin-top: 0.25rem; }
-.mt-2 { margin-top: 0.5rem; }
-.mt-4 { margin-top: 1rem; }
-.mb-2 { margin-bottom: 0.5rem; }
-.mb-4 { margin-bottom: 1rem; }
-.mb-6 { margin-bottom: 1.5rem; }
-.mb-8 { margin-bottom: 2rem; }
-.text-primary { color: var(--primary-color); }
-.text-secondary { color: var(--text-secondary); }
+.text-center {
+  text-align: center;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
 
 /* Error/Success Messages */
 .alert {
@@ -455,8 +487,13 @@ textarea.form-control {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loader-container {

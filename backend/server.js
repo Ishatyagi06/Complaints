@@ -26,6 +26,11 @@ app.use('/api/auth', authRoutes);
 app.use('/api/complaints', complaintRoutes);
 app.use('/api/ai', aiRoutes);
 
+// Root health-check route
+app.get('/', (req, res) => {
+  res.json({ message: 'AI Complaint Management System API is running ✅', status: 'OK' });
+});
+
 // Error Handling Middleware
 app.use((err, req, res, next) => {
   console.error(err.stack);
